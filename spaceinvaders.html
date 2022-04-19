@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            .ship {
+                fill: lightblue;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+            .hidden
+            {
+                visibility: hidden;
+            }
+            
+            .gameover {
+                font-family:sans-serif;
+                font-size:30px;
+                fill:goldenrod;
+            }
+            .score {
+                font-family:sans-serif;
+                font-size:20px;
+                fill:white;
+            }
+        </style>
+        <script src="./dist/spaceinvaders.js"></script>
+    </head>
+    <body>
+        <h1>Space Invaders</h1>
+        <svg id="svgCanvas" width="600" height="600">
+            <text id="score" x="20" y="35" class="score">Score: 0</text>
+            <text id="gameOver" x="100" y="300" class="gameover">...Oops. Press Enter to restart</text>
+            <g id="ship" transform="translate(100,100)">
+            <polygon class="ship" points="-15,20 15,20 0,-20">
+            </polygon>
+            </g>
+        </svg>
+
+        <div id="controls">
+            <h2>Controls:</h2>
+            <table>
+                <tr><td>Turn Left</td><td><div id="ArrowLeft" class="key">&#8678;</div></td></tr>
+                <tr><td>Turn Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+                <tr><td>Fire</td><td><div id="Space" class="key" style="width:50px">Space</div></td></tr>
+                <tr><td>Restart</td><td><div id="Enter" class="key" style="width:50px">Enter</div></td></tr>
+            </table>
+        </div>
+    </body>
+</html>
